@@ -3,6 +3,13 @@ from pymongo import MongoClient
 import google.generativeai as genai
 import os
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+mongo_uri = os.getenv("MONGO_URI")
+google_api_key = os.getenv("GOOGLE_API_KEY")
+
 app = Flask(__name__)
 
 # === CONFIGURE YOUR API KEY & MONGODB URI ===
