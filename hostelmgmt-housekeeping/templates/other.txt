@@ -1,0 +1,95 @@
+originally housekeeping-index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Housekeeping Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h1 class="text-center mb-5">Housekeeping Services</h1>
+
+    <div class="row justify-content-center g-4">
+
+      <!-- General Cleaning Services -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title">🧹 General Cleaning Services</h4>
+            <p class="card-text">Cleaning of classrooms, labs, offices, libraries, hostels, and dining halls. Includes sweeping, mopping, dusting, and trash disposal.</p>
+            <p class="fw-bold">Company: {{ company_names["Cleaning and General Services"] }}</p>
+            <a href="/housekeeping/upgrade?service_type=General Cleaning Services" class="btn btn-success w-100 mb-2">Upgrade</a>
+            <a href="/housekeeping/feedback" class="btn btn-secondary w-100">Feedback</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Waste Management -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title">🗑️ Waste Management</h4>
+            <p class="card-text">Daily collection, segregation, and safe disposal of all types of waste. Includes recycling management and handling biohazard waste.</p>
+            <p class="fw-bold">Company: {{ company_names["Waste Collection"] }}</p>
+            <a href="/housekeeping/upgrade?service_type=Waste Management" class="btn btn-success w-100 mb-2">Upgrade</a>
+            <a href="/housekeeping/feedback" class="btn btn-secondary w-100">Feedback</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Washroom & Sanitation -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title">🚿 Washroom & Sanitation</h4>
+            <p class="card-text">Regular cleaning and sanitizing of all washrooms. Restocking supplies and ensuring fixtures are hygienic and functional.</p>
+            <p class="fw-bold">Company: {{ company_names["Sanitation"] }}</p>
+            <a href="/housekeeping/upgrade?service_type=Washroom & Sanitation" class="btn btn-success w-100 mb-2">Upgrade</a>
+            <a href="/housekeeping/feedback" class="btn btn-secondary w-100">Feedback</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outdoor Cleaning -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title">🌳 Outdoor Cleaning</h4>
+            <p class="card-text">Cleaning of outdoor areas including pathways, parking lots, gardens, and sports grounds. Involves sweeping, leaf clearing, and trash removal.</p>
+            <p class="fw-bold">Company: {{ company_names["Outdoor Maintenance"] }}</p>
+            <a href="/housekeeping/upgrade?service_type=Outdoor Cleaning" class="btn btn-success w-100 mb-2">Upgrade</a>
+            <a href="/housekeeping/feedback" class="btn btn-secondary w-100">Feedback</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- {'Cleaning': 'ABCD Cleaning Service', 'Waste Collection': 'ABCD Waste Management Service', 'Sanitation': 'Washroom and Sanitation Services', 'Outdoor Maintenance': 'Outdoor Cleaning', 'Maintenance': 'Hardware Assistance'} -->
+      <!-- Hardware Assistance -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title">🛠️ Hardware Assistance</h4>
+            <p class="card-text">Basic maintenance support for furniture, fixtures, and minor repairs. Includes assisting with moving, arranging, and setting up hardware.</p>
+            <p class="fw-bold">Company: {{ company_names['Maintenance'] }}</p>
+            <a href="/housekeeping/upgrade?service_type=Hardware Assistance" class="btn btn-success w-100 mb-2">Upgrade</a>
+            <a href="/housekeeping/feedback" class="btn btn-secondary w-100">Feedback</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Back button -->
+    <div class="text-center mt-5">
+      <a href="/" class="btn btn-secondary">⬅️ Back to Home</a>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
