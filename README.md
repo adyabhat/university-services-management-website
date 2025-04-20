@@ -13,15 +13,15 @@ Contributors:
 All contributors belong to section 6A (CSE-AIML), PES University- Ring Road Campus (Even semester, 2025).
 
 Microservices Integrated:
-## A. Hostel Management Services:
-1. **Hostel Student Registration, Deletion, Display**
-2. **Hostel Attendance Marking and Attendance History Display**
+#### A. Hostel Management Services:
+1. Hostel Student Registration, Deletion, Display
+2. Hostel Attendance Marking and Attendance History Display
 3. **Hostel Mess Menu Display and Updation, Integration**
-## B. Housekeeping Services:
-4. **Services Registration, Updation, and Provision for Feedback**
-## C. AI-Powered Smart Tools:
-5. **Intelligent Course Scheduler (Timetable)**
-6. **Smart Content Recommender (For Topics, To Use as a Study Guide)**
+#### B. Housekeeping Services:
+4. Services Registration, Updation, and Provision for Feedback
+#### C. AI-Powered Smart Tools:
+5. Intelligent Course Scheduler (Timetable)
+6. Smart Content Recommender (For Topics, To Use as a Study Guide)
 
 Tech Stack Used:
 1. Flask: Flask is used as the web framework to create backend logic for routing, handling HTTP requests, and integrating with templates.
