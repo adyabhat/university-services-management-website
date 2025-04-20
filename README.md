@@ -33,6 +33,7 @@ Tech Stack Used:
 7. Docker: Docker is used to containerize the application, enabling each service such as hostel management and course management to run in isolated environments on specific ports.
 
 Project Folder Structure:
+```
 university-management/
 │
 ├── docker-compose.yml
@@ -75,6 +76,7 @@ university-management/
     ├── app.py
     ├── Dockerfile
     └── requirements.txt
+```
 
 Integration of Microservices:
 The first 4 microservices (hostel management and housekeeping domains) listed above were integrated into a common web app. Database operations (retrieval, storage and updates) were made independent by using distinct function calls for modularity. Front end pages and components were meticulously organized to improve design. This web app, along with the 2 microservices of the smart university domain, were each deployed on Docker containers. They were designed to be accessible through the front end, but each of which was deployed on a different Docker container. This was set up through Docker Compose. Thus a multi-container application was built, entirely configured through a single YAML file.
