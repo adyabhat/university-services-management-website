@@ -16,7 +16,7 @@ Microservices Integrated:
 #### A. Hostel Management Services:
 1. Hostel Student Registration, Deletion, Display
 2. Hostel Attendance Marking and Attendance History Display
-3. **Hostel Mess Menu Display and Updation, Integration**
+3. Hostel Mess Menu Display and Updation, Integration
 #### B. Housekeeping Services:
 4. Services Registration, Updation, and Provision for Feedback
 #### C. AI-Powered Smart Tools:
@@ -85,6 +85,6 @@ Running The Website:
 1. Clone this repository and navigate to the `university-management` folder.
 2. Build the Docker containers and set it up by running `docker-compose up --build`.
 3. Open the web app on the browser through the following URLs:
-   Hostel and Housekeeping: `http://localhost:5000`
-   Intelligent Course Scheduler: `http://localhost:5001`
-   Smart Content Recommender: `http://localhost:5002`
+   1. Hostel and Housekeeping: `http://localhost:5000`
+   2. Intelligent Course Scheduler: `http://localhost:5001`
+   3. Smart Content Recommender: `http://localhost:5002`
