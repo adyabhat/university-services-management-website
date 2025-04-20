@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Content Recommendation System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <style>
+    .custom-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: transparent;
+      color: #000000;
+      border: 2px solid #000000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .custom-btn:hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📚🤖 Smart Content Recommendation System</h1>
+
+    <!-- Username input -->
+    <input type="text" id="username" placeholder="Enter your name">
+
+    <!-- Centered and Smaller View History Button -->
+    <div style="display: flex; justify-content: center; margin: 10px 0;">
+      <button onclick="viewHistory()" style="width: 200px;">View My History</button>
+    </div>
+
+    <!-- Query input -->
+    <textarea id="question" rows="5" placeholder="Enter your query or question"></textarea>
+
+    <!-- Get Recommendations Button -->
+  <div class="button-container">
+    <button onclick="getRecommendations()">Get Content Recommendations</button>
+  </div>
+
+
+    <!-- Response box -->
+    <div id="result-box">
+      <h3>Response:</h3>
+      <p id="response-content"></p>
+    </div>
+  </div>
+
+  <a href="http://localhost:5000/" class="custom-btn">🏠 Back Home</a>
+
+  <!-- JS Scripts -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script>
+    function viewHistory() {
+      const username = document.getElementById("username").value.trim();
+      if (!username) {
+        alert("Please enter your name to view history.");
+        return;
+      }
+      window.location.href = `/history/${username}`;
+    }
+  </script>
+</body>
+</html>

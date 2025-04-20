@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ username }}'s Search History</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    .formatted-response ul {
+      margin-left: 1.2rem;
+      list-style-type: disc;
+    }
+
+    .formatted-response strong {
+      font-weight: bold;
+    }
+
+    .history-entry {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔎🕒 {{ username }}'s Previous Searches</h1>
+
+    {% if history %}
+      <div id="history-list">
+        {% for item in history %}
+          <div class="history-entry">
+            <p><strong>Query:</strong> {{ item.question }}</p>
+            <p><strong>Response:</strong>
+              <span class="history-response">{{ item.response }}</span>
+            </p>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No previous history found for this user.</p>
+    {% endif %}
+
+    <a href="/" style="display: inline-block; margin-top: 1rem;">⬅ Back to Home</a>
+  </div>
+
+  <script>
+    function convertMarkdownToHTML(text) {
+      text = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+      
+      const lines = text.split('\n');
+      let inList = false;
+      let html = '';
+    
+      lines.forEach(line => {
+        const trimmed = line.trim();
+    
+        if (trimmed.startsWith('* ')) {
+          if (!inList) {
+            html += '<ul>';
+            inList = true;
+          }
+          html += `<li>${trimmed.slice(2)}</li>`;
+        } else {
+          if (inList) {
+            html += '</ul>';
+            inList = false;
+          }
+          if (trimmed) {
+            html += `<p>${trimmed}</p>`;
+          }
+        }
+      });
+    
+      if (inList) html += '</ul>';
+    
+      return html;
+    }
+  
+    document.querySelectorAll(".history-response").forEach((el) => {
+      const rawText = el.textContent || el.innerText;
+      const formattedHTML = convertMarkdownToHTML(rawText);
+      el.innerHTML = `<div class="formatted-response">${formattedHTML}</div>`;
+    });
+  </script>  
+  
+</body>
+</html>
