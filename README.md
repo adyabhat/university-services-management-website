@@ -13,15 +13,15 @@ Contributors:
 All contributors belong to section 6A (CSE-AIML), PES University- Ring Road Campus (Even semester, 2025).
 
 Microservices Integrated:
-A. Hostel Management Services:
-    1. Hostel Student Registration, Deletion, Display
-    2. Hostel Attendance Marking and Attendance History Display
-    3. Hostel Mess Menu Display and Updation, Integration
-B. Housekeeping Services:
-    4. Services Registration, Updation and Provision for Feedback
-C. AI-Powered Smart Tools:
-    5. Intelligent Course Scheduler (timetable)
-    6. Smart Content Recommender (for topics, to use as a study guide)
+## A. Hostel Management Services:
+1. **Hostel Student Registration, Deletion, Display**
+2. **Hostel Attendance Marking and Attendance History Display**
+3. **Hostel Mess Menu Display and Updation, Integration**
+## B. Housekeeping Services:
+4. **Services Registration, Updation, and Provision for Feedback**
+## C. AI-Powered Smart Tools:
+5. **Intelligent Course Scheduler (Timetable)**
+6. **Smart Content Recommender (For Topics, To Use as a Study Guide)**
 
 Tech Stack Used:
 1. Flask: Flask is used as the web framework to create backend logic for routing, handling HTTP requests, and integrating with templates.
@@ -85,6 +85,6 @@ Running The Website:
 1. Clone this repository and navigate to the `university-management` folder.
 2. Build the Docker containers and set it up by running `docker-compose up --build`.
 3. Open the web app on the browser through the following URLs:
-   Hostel and Housekeeping: http://localhost:5000
-   Intelligent Course Scheduler: http://localhost:5001
-   Smart Content Recommender: http://localhost:5002
+   Hostel and Housekeeping: `http://localhost:5000`
+   Intelligent Course Scheduler: `http://localhost:5001`
+   Smart Content Recommender: `http://localhost:5002`
