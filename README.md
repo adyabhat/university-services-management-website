@@ -32,48 +32,86 @@ All contributors belong to section 6A (CSE-AIML), PES University- Ring Road Camp
 
 ## Project Folder Structure:
 ```
-university-management/
+university-management
+│   .gitignore
+│   docker-compose.yml
+│   README.md
 │
-├── docker-compose.yml
+├───hostel-menu
+│   │   app.py
+│   │   check.py
+│   │   Dockerfile
+│   │   hostel.db
+│   │   requirements.txt
+│   │   students.db
+│   │
+│   └───templates
+│           index.html
+│           menu.html
+│           other.txt
 │
-├── hostelmgmt-housekeeping/
-│   ├── templates/
-│   │   ├── attendance.html
-│   │   ├── attendance_history.html
-│   │   ├── attendance_history_results.html
-│   │   ├── hostel-index.html
-│   │   ├── housekeeping-feedback.html
-│   │   ├── housekeeping-index.html
-│   │   ├── housekeeping-register.html
-│   │   ├── housekeeping-upgrade.html
-│   │   ├── index.html
-│   │   ├── menu.html
-│   │   ├── register.html
-│   │   └── students.html
-│   ├── venv/
-│   ├── app.py
-│   ├── check.py
-│   ├── Dockerfile
-│   ├── hostel.db
-│   ├── students.db
-│   ├── requirements.txt
-│   └── README.txt
+├───hostel-registration-attendance
+│   │   app.py
+│   │   Dockerfile
+│   │   models.py
+│   │   requirements.txt
+│   │   students.db
+│   │
+│   └───templates
+│           attendance.html
+│           attendance_history.html
+│           attendance_history_result.html
+│           index.html
+│           register.html
+│           students.html
 │
-├── intelligent-scheduler/
-│   ├── templates/
-│   │   └── index.html
-│   ├── app.py
-│   ├── Dockerfile
-│   └── requirements.txt
+├───housekeeping
+│   │   app.py
+│   │   Dockerfile
+│   │   housekeeping.db
+│   │   requirements.txt
+│   │
+│   └───templates
+│           housekeeping-feedback.html
+│           housekeeping-index.html
+│           housekeeping-register.html
+│           housekeeping-upgrade.html
 │
-└── smart-content-recommender/
-    ├── static/
-    ├── templates/
-    │   ├── history.html
-    │   └── index.html
-    ├── app.py
-    ├── Dockerfile
-    └── requirements.txt
+├───intelligent-scheduler
+│   │   app.py
+│   │   Dockerfile
+│   │   requirements.txt
+│   │
+│   ├───templates
+│   │       index.html
+│   │
+│   └───__pycache__
+│           scheduler.cpython-312.pyc
+│
+├───main
+│   │   app.py
+│   │   Dockerfile
+│   │   requirements.txt
+│   │
+│   └───templates
+│           index.html
+│
+└───smart-content-recommender
+    │   .env
+    │   app.py
+    │   Dockerfile
+    │   requirements.txt
+    │
+    ├───static
+    │   ├───css
+    │   │       style.css
+    │   │
+    │   └───js
+    │           main.js
+    │
+    └───templates
+            history.html
+            index.html
 ```
 
 ## Integration of Microservices:
@@ -83,6 +121,9 @@ The first 4 microservices (hostel management and housekeeping domains) listed ab
 1. Clone this repository and navigate to the `university-management` folder.
 2. Build the Docker containers and set it up by running `docker-compose up --build`.
 3. Open the web app on the browser through the following URLs:
-   1. Hostel and Housekeeping: `http://localhost:5000`.
-   2. Intelligent Course Scheduler: `http://localhost:5001`.
-   3. Smart Content Recommender: `http://localhost:5002`.
+   1. Main Dashboard (Entry Point): `http://localhost:5000`,
+   2. Hostel Registration & Attendance: `http://localhost:5001`,
+   3. Hostel Menu Management: `http://localhost:5002`,
+   4. Housekeeping Services: `http://localhost:5003`,
+   5. Intelligent Course Scheduler: `http://localhost:5004`,
+   6. Smart Content Recommender: `http://localhost:5005`.
