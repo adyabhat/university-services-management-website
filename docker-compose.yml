@@ -1,23 +1,44 @@
 version: '3'
 
 services:
-  hostel:
+  main:
     build:
-      context: ./hostelmgmt-housekeeping
+      context: ./main
       dockerfile: Dockerfile
     ports:
       - "5000:5000"
 
-  course:
+  hostel-registration-attendance:
+    build:
+      context: ./hostel-registration-attendance
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+  
+  hostel-menu:
+    build:
+      context: ./hostel-menu
+      dockerfile: Dockerfile
+    ports:
+      - "5002:5002"
+  
+  housekeeping:
+    build:
+      context: ./housekeeping
+      dockerfile: Dockerfile
+    ports:
+      - "5003:5003"
+
+  course-scheduler:
     build:
       context: ./intelligent-scheduler
       dockerfile: Dockerfile
     ports:
-      - "5001:5001"
+      - "5004:5004"
 
   smart-content:
     build:
       context: ./smart-content-recommender
       dockerfile: Dockerfile
     ports:
-      - "5002:5002"
+      - "5005:5005"

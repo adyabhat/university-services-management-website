@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Attendance History</title>
+    
+    <!-- Bootstrap CSS (Dark theme) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .container {
+            background-color: #1f1f1f;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        label {
+            font-weight: 600;
+        }
+        .form-control {
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #555;
+        }
+        .form-control:focus {
+            background-color: #444;
+            border-color: #777;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <!-- Heading -->
+    <h2>📅 View Attendance History</h2>
+
+    <!-- Attendance Date Form -->
+    <form method="post">
+        <div class="mb-3">
+            <label for="date" class="form-label">Select Date:</label>
+            <input type="date" name="date" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">View</button>
+    </form>
+
+    <br>
+
+    <!-- Back Link -->
+    <a href="/attendance" class="btn btn-secondary w-100">← Back to Attendance</a>
+</div>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

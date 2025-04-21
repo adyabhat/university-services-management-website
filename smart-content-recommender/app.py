@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from pymongo import MongoClient
+import pymongo
 import google.generativeai as genai
 import os
 
@@ -13,8 +14,16 @@ google_api_key = os.getenv("GOOGLE_API_KEY")
 app = Flask(__name__)
 
 # === CONFIGURE YOUR API KEY & MONGODB URI ===
-genai.configure(api_key="AIzaSyCN0m7WYw9yjLxhTDfFGT-vDqrpTD0x6ko")
-mongo_uri = "mongodb+srv://adyabhat0201:b8j56SWILS8kt6fg@cluster0.nml8zpn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+genai.configure(api_key=google_api_key)
+
+try:
+    client = pymongo.MongoClient(mongo_uri, serverSelectionTimeoutMS=5000)
+    client.admin.command('ping')
+    db = client["your_db_name"]
+    collection = db["your_collection"]
+    print("✅ Connected to MongoDB")
+except Exception as e:
+    print("❌ MongoDB connection error:", e)
 
 # Connect to MongoDB Atlas
 client = MongoClient(mongo_uri)
@@ -67,4 +76,4 @@ def user_history(username):
 
 if __name__ == '__main__':
     # app.run(debug=True)
-    app.run(host='0.0.0.0', port=5002, debug=True)
+    app.run(host='0.0.0.0', port=5005, debug=True)
